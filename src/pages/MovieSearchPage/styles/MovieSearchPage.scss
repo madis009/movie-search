@@ -1,0 +1,79 @@
+$input-bg-color: #333;
+$input-border-color: #555;
+$input-focus-color: #ff0000; // Red for cinematic feel
+$input-hover-color: lighten($input-border-color, 20%);
+$text-color: #fff;
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.page-container {
+  display: flex;
+}
+
+.search-container {
+  position: sticky;
+  top: 0px;
+  width: 25%;
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 8px;
+  background: linear-gradient(to bottom, #2c3e50, #34495e); // Gradient background for style
+  color: #ffffff; // Ensures high contrast of text against dark background
+
+  .search-box {
+    input, select {
+      width: 100%;
+    }
+  }
+}
+
+.movies-container {
+  width: 75%;
+  padding: 8px 16px;
+  display: flex;
+  flex-wrap: wrap; // Ensures that the items can wrap onto the next line
+  gap: 8px;
+
+  .movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: calc(100% / 3 - 16px); // Adjust for the gap
+    height: 400px;
+    overflow: hidden;
+    border: 2px solid #60606035;
+    border-radius: 0.25rem;
+  }
+}
+
+.loading-error {
+  width: 75%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 700;
+  
+  .loading {
+    color: grey;
+  }
+
+  .error-message {
+    color:#ff3050;
+  }  
+}
+
+.no-movies-message {
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 700;
+  color:#555;
+}

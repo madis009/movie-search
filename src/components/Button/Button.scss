@@ -1,0 +1,36 @@
+$btn-bg-color: #1d4e52;
+$btn-border-color: rgb(15, 53, 56);
+$btn-focus-color: #ff0000; // Red for cinematic feel
+$btn-hover-color: lighten($btn-border-color, 20%);
+$text-color: #b8d1d3;
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: $btn-bg-color;
+    border: 1px solid $btn-border-color;
+    color: $text-color;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3em;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+        background-color: $btn-hover-color; // Lighter shade on hover
+        border-color: $btn-hover-color;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $btn-focus-color; // Highlight on focus
+    }
+
+    &:active {
+        background-color: darken($btn-bg-color, 10%);
+        border-color: $btn-focus-color; // Red border on active/click
+    }
+}

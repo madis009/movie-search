@@ -1,0 +1,56 @@
+$movie__padding: 20px;
+
+.image-box {
+    overflow: hidden;
+    height: 250px;
+    .movie-poster {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out; // Smooth transition for zoom effect
+    }
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    height: calc(150px - 2 * $movie__padding);
+    padding: $movie__padding;
+    justify-content: space-between;
+    background-color: #f4f4f4; // Light background color for better readability
+}
+
+.movie {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; // Transition for shadow and transform to make it smooth
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Modified shadow effect for depth
+        .movie-info {
+            border-color: #007bff; // Vibrant border color on hover
+        }
+
+        .image-box .movie-poster {
+            transform: scale(1.1); // Applies the zoom effect to the image on hover
+        }
+    }
+}
+
+.movie-title {
+    font-size: 1.2rem; // Reduced font size for better proportionality
+    color: #333; // Darker color for better contrast
+    margin-bottom: 4px; // Adjusted margin
+}
+
+.movie-description {
+    flex: 1;
+    text-align: justify;
+    p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; // Adjusted line clamp for optimal text amount
+        font-size: 0.9rem; // Smaller font size for description
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal; // Changed to normal to allow text wrapping
+        line-height: 1.4; // Improved line height for readability
+    }
+}

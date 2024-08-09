@@ -1,0 +1,53 @@
+$input-bg-color: #b8d1d3;
+$input-border-color: #071b1d;
+$input-focus-color: #ff0000; // Red for cinematic feel
+$input-hover-color: lighten($input-border-color, 20%);
+$text-color: #b8d1d3;
+$text-input-color: #051213;
+
+.input-container {
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: $text-color;
+    }
+
+    .text-input, .select-field {
+        width: 100%;
+        padding: 10px;
+        background-color: $input-bg-color;
+        border: 1px solid $input-border-color;
+        color: $text-input-color;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+        &:focus {
+            outline: none;
+            border-color: $input-focus-color;
+        }
+
+        &:hover {
+            border-color: $input-hover-color;
+        }
+    }
+
+    .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+
+        .checkbox-input {
+            accent-color: $input-focus-color;
+        }
+
+        .checkbox-label {
+            margin-left: 8px;
+            color: $text-color;
+        }
+
+        &:hover .checkbox-label {
+            text-decoration: underline; // subtle hover effect for labels
+        }
+    }
+}

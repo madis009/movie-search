@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "module": "ESNext",
+      "lib": ["dom", "ESNext"],
+      "jsx": "react-jsx",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      "outDir": "./build" // Defines the output directory for compiled files
+    },
+    "include": ["src/**/*"]
+}
